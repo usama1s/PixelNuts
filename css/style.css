@@ -7480,6 +7480,11 @@ word-spacing: 1px;
   color: #fff;
   cursor: default;
 }
+.formLabel span{
+  color: red;
+  font-size: 24px;
+  line-height: 16px;
+}
 .Checkbox .formLabel{
   cursor: pointer;
 }
