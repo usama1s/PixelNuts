@@ -7470,7 +7470,7 @@ word-spacing: 1px;
 }
 .input{
   width: 100%;
-  padding: 5px;
+  padding: 5px 10px;
   border-radius: 5px;
   outline: none;
   border: none;
