@@ -24,6 +24,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: normal;
   font-style: normal;
+  min-width: 400px;
 }
 
 /* line 12, ../../Arafath/CL/CL October/214. App Landing Page/HTML/scss/theme-default.scss */
@@ -104,7 +105,7 @@ p {
   font-weight: 300;
   line-height: 28px;
   color: #4D4D4D;
-  margin-bottom: 13px;
+  margin-bottom: 10px;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -673,15 +674,62 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   /* line 2, ../../Arafath/CL/CL October/214. App Landing Page/HTML/scss/_section_title.scss */
   .section_title h3 {
     font-size: 30px;
     line-height: 36px;
   }
-  .prising_bottom{
-    left: 37% !important;
+  .prising_area .single_prising {
+min-height: auto !important;
   }
+  .prising_bottom {
+    position: relative !important;
+    left: 0 !important;
+     bottom: 0 !important;
 }
+.prising_area .single_prising {
+padding-bottom: 20px !important;
+}
+.text-div-scroll {
+  height: calc(100% - 178px);
+  text-align: center;
+  font-size: 15px;
+  /* font-weight: 600; */
+  overflow-y: auto !important;
+}
+.prising_bottom_fix{
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+}
+ .popup ::-webkit-scrollbar{
+  width: 7px !important;
+
+}
+
+
+.popup ::-webkit-scrollbar-track {
+  background: transparent !important;
+
+}
+
+
+.popup  ::-webkit-scrollbar-thumb {
+  background: #c4c4c4 !important;
+  border-radius: 4px;
+
+}
+
+
+.popup  ::-webkit-scrollbar-thumb:hover {
+  background: rgb(146, 144, 144) !important;
+}
+
 
 @media (min-width: 768px) and (max-width: 991px) {
   /* line 2, ../../Arafath/CL/CL October/214. App Landing Page/HTML/scss/_section_title.scss */
@@ -3889,11 +3937,11 @@ h3 {
   border-radius: 15px;
 }
  .single_prising {
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  padding-bottom: 40px;
+  /* padding-bottom: 40px; */
   background-color: #ececee;
   border-radius: 15px;
 }
@@ -3920,6 +3968,7 @@ h3 {
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 0;
+  color: white;
 }
 
 /* line 37, ../../Arafath/CL/CL October/214. App Landing Page/HTML/scss/_prising.scss */
@@ -7398,6 +7447,9 @@ a.anchor1{
 
 }
 @media (max-width: 767px) {
+   .formSection{
+    width: 100% !important;
+  }
 	.gallery_carousel .carousel-inner{
     width: 95%
   }
@@ -7425,17 +7477,39 @@ a.anchor1{
   font-size: 15px;
   font-weight: 600;
 }
+.text-div2 a,
 .text-div2 {
   font-weight: 600;
   color: #5f378d;
+  margin-bottom: 10px;
 }
 
 .popup {
   position: fixed;
-  top: 26%;
-  left: 36%;
-  right: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100vw !important;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   display: none;
+  padding: 0 5px 0 5px;
+  background: rgba(255,255,255,0.7);
+  z-index: 100;
+  min-width: 400px;
+  min-height: 100vh;
+  max-height: 100vh;
+}
+.popup>div{
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  overflow-y: auto;
+  height: auto;
+  max-height: none !important;
+  z-index: 1000000000;
+  position: relative;
 }
 .popuphead{
   font-weight: 600;
@@ -7443,11 +7517,22 @@ a.anchor1{
 }
 .popup2 {
   position: fixed;
-  top: 12%;
-  left: 25%;
-  right: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: auto !important;
+  /* right: 0; */
   display: none;
   z-index: 100;
+}
+@media (max-width: 767px){
+  .popup>div{
+  height: auto;
+  max-height: none !important;
+}
+}
+#popup2>div{
+  height: calc(100% - 40px);
 }
 .popupTitle{
   font-weight: 800;
@@ -7647,6 +7732,7 @@ padding: 10px 15px;
  }
  .get_now{
    cursor: pointer;
+   /* margin-top: 20px; */
  }
 /* ---checbox-- */
 
